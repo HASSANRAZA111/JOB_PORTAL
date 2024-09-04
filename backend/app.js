@@ -36,11 +36,7 @@ app.use(
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/job", jobRouter);
 app.use("/api/v1/application", applicationRouter);
-app.get("/", (req, res, next)=>{return res.status(200).json({
-  success: true,
-  message: "HELLO WORLD"
-  I
-  })})
+
 newsLetterCron()
 connection();
 app.use(errorMiddleware);
