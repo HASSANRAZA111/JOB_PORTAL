@@ -1,10 +1,24 @@
 {
   "version": 2,
-  "builds": [{ "src": "*.js", "use": "@vercel/node" }],
+  "builds": [
+    { "src": "package.json", "use": "@vercel/node" }
+  ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/"
+    { "src": "/api/(.*)", "dest": "/api/index.js" },
+    { "src": "/(.*)", "dest": "/public/$1" }
+  ],
+  "env": {
+    "CUSTOM_ENV_VARIABLE": "value"
+  },
+  "build": {
+    "env": {
+      "BUILD_ENV_VARIABLE": "value"
     }
-  ]
+  },
+  "functions": {
+    "api/index.js": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  }
 }
