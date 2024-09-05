@@ -12,7 +12,7 @@ Backend: Node.js, Express.js<br>
 Database: MongoDB,MongoDB Atlas<br>
 State Management: Redux and Redux Toolkit.<br><br>
 
-# Live website:
+# Live website:https://job-portal-frontend-lilac.vercel.app/
 
 
 # Click the link below for the Demo video:
